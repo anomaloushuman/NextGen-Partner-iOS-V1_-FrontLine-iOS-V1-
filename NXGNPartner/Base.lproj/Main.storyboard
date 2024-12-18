@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NXGN_Partner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAN-Ek-gT4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g93-r9-iLF">
+                                <rect key="frame" x="167" y="621" width="80" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="RetryLoading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sl-to-UvT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uh oh!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fx-GL-pMO">
+                                <rect key="frame" x="143" y="221" width="128" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="requires an active internet connection to work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D4-uI-Wxr">
+                                <rect key="frame" x="29.5" y="457.5" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're offline, the NXGN Partner App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi6-i1-Q1f">
+                                <rect key="frame" x="66" y="437.5" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-fz-tdK">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Fx-GL-pMO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="219-FJ-chC"/>
+                            <constraint firstItem="dAN-Ek-gT4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Kd-Ze-rA3"/>
+                            <constraint firstItem="g93-r9-iLF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="9wh-2U-Ugp"/>
+                            <constraint firstItem="Zi6-i1-Q1f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AB1-Jm-AcM"/>
+                            <constraint firstItem="dAN-Ek-gT4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUD-Kv-co4"/>
+                            <constraint firstItem="GFT-fz-tdK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EyT-KC-Dwg"/>
+                            <constraint firstAttribute="bottom" secondItem="dAN-Ek-gT4" secondAttribute="bottom" id="LSp-k9-1B2"/>
+                            <constraint firstItem="1D4-uI-Wxr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="MRp-eC-8ez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAN-Ek-gT4" secondAttribute="trailing" id="NlM-tf-fG1"/>
+                            <constraint firstItem="Zi6-i1-Q1f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PMg-w8-scm"/>
+                            <constraint firstItem="GFT-fz-tdK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RDB-N4-cKl"/>
+                            <constraint firstItem="GFT-fz-tdK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YFk-53-PuZ"/>
+                            <constraint firstItem="dAN-Ek-gT4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hfr-FU-dKg"/>
+                            <constraint firstItem="dAN-Ek-gT4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="psI-Cm-W0r"/>
+                            <constraint firstItem="1D4-uI-Wxr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWk-Nf-dLC"/>
+                            <constraint firstItem="g93-r9-iLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uge-BL-ZGY"/>
+                            <constraint firstItem="9Fx-GL-pMO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vY8-h4-i7V"/>
+                            <constraint firstItem="GFT-fz-tdK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ypf-Dq-Eof"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ConnLabel" destination="9Fx-GL-pMO" id="CJK-Co-6c2"/>
+                        <outlet property="OfflineOne" destination="Zi6-i1-Q1f" id="Hue-OS-mbk"/>
+                        <outlet property="OfflineTwo" destination="1D4-uI-Wxr" id="Qgt-wO-XID"/>
+                        <outlet property="RefreshButton" destination="g93-r9-iLF" id="QGI-Yb-GEI"/>
+                        <outlet property="Spinner" destination="GFT-fz-tdK" id="080-7C-EpX"/>
+                        <outlet property="webview" destination="dAN-Ek-gT4" id="Jsc-Yc-SqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
